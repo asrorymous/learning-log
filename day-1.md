@@ -11,5 +11,5 @@ Current goal:
 - get comfortable using GitHub
 - not rushing into projects
 
-Catatan:
-Ini adalah catatan awal saat saya membiasakan diri menggunakan GitHub sebelum masuk ke materi QA Automation.
+Note:
+This is my initial log for mastering GitHub. While I started with a focus on QA Automation, I am now pivoting my expertise toward Web Scraping and Data Pipelines.

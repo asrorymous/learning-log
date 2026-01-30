@@ -1,41 +1,40 @@
-# Decision Log – QA Automation
+# Decision Log – Data Pipeline & Scraping
 
-## Tujuan
+## Objective
 
-Catatan ini menjelaskan **kenapa saya memilih test case tertentu untuk diotomasi**
-dan kenapa ada beberapa yang tidak.
+This log explains the technical decisions made regarding which data extraction processes and transformation rules are automated within my ETL pipelines.
 
-## Daftar Test Case
+## Pipeline Components
 
-1. Login valid
-2. Login invalid
-3. Checkout flow
-4. Animasi hover tombol
-5. Sorting produk
+1. Main Scraper (Data Extraction)
+2. Data Cleaning (Transformation)
+3. Error Notification (Monitoring)
+4. Proxy Rotation
+5. Image Downloading
 
-## Keputusan
+## Decisions
 
-### 1. Login valid
+### 1. Main Scraper (Data Extraction)
 
-**Keputusan:** diotomasi  
-**Alasan:** ini pintu masuk sistem, critical flow, semua user melewati langkah ini
+**Decision:** Automated
+**Reason:** This is the core of the "Extract" phase. Automation is mandatory to ensure consistent data flow from the target source.
 
-### 2. Login invalid
+### 2. Data Cleaning (Transformation)
 
-**Keputusan:** diotomasi  
-**Alasan:** feedback ke user, rawan regression, harus selalu diuji
+**Decision:** Automated
+**Reason:** To ensure data integrity. Automated scripts remove duplicates and format dates/currencies before the "Load" phase.
 
-### 3. Checkout flow
+### 3. Error Notification (Monitoring)
 
-**Keputusan:** diotomasi  
-**Alasan:** bisnis utama, transaksi penting, user experience harus dijaga
+**Decision:** Automated
+**Reason:** Critical for pipeline health. I need immediate alerts if the target website structure changes or the scraper fails.
 
-### 4. Animasi hover tombol
+### 4. Proxy Rotation
 
-**Keputusan:** tidak diotomasi  
-**Alasan:** visual saja, mudah flaky, low value
+**Decision:** Pending / Conditional
+**Reason:** Currently not required for low-volume scraping. Will be automated if rate-limiting becomes a bottleneck.
 
-### 5. Sorting produk
+### 5. Image Downloading
 
-**Keputusan:** tidak diotomasi (sementara)  
-**Alasan:** tidak critical, bisa manual dulu, baru otomatis jika sering bug
+**Decision:** Manual / Not Automated (Temporary)
+**Reason:** High storage cost and not critical for the current data analysis phase. Focusing on textual data first.
