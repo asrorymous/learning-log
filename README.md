@@ -1,13 +1,14 @@
-# Learning & Development Log
+# Learning & Development Log: Data Engineering Journey
 
-This repository serves as my personal learning journal. It records my step-by-step progress in mastering GitHub, automation, and data workflows.
+This repository serves as my personal learning journal, documenting my transition from Automation to Data Engineering.
 
-### Current Path: ETL & Data Pipelines
+### Current Path: ELT & Modern Data Stack
 
-While this repo contains my early steps in QA Automation, I am currently focusing on:
+While this repo contains my early steps in QA and Web Scraping, I am currently focusing on:
 
-- **Web Scraping Pipelines** (using Playwright and Node.js).
-- **ETL/ELT Architectures**.
-- **Data Integrity & Automation**.
+- **ELT/ETL Architectures**: Building robust data movement patterns.
+- **Data Warehousing**: Learning how to structure data for analysis.
+- **Modern Data Stack**: Exploring tools like dbt, SQL-based transformations, and Airflow/Prefect.
+- **Data Integrity & Automation**: Ensuring reliability through CI/CD (GitHub Actions).
 
-_This repository is a living document of my technical growth._
+_This repository is a living document of my technical growth from scraper to architect._

@@ -1,40 +1,20 @@
-# Decision Log – Data Pipeline & Scraping
+# Decision Log – Data Engineering & Pipeline Evolution
 
 ## Objective
 
-This log explains the technical decisions made regarding which data extraction processes and transformation rules are automated within my ETL pipelines.
+This log explains the technical pivot from Web Scraping to a dedicated **ELT (Extract, Load, Transform)** focus.
 
-## Pipeline Components
+## Strategic Pivot: From Scraping to ELT
 
-1. Main Scraper (Data Extraction)
-2. Data Cleaning (Transformation)
-3. Error Notification (Monitoring)
-4. Proxy Rotation
-5. Image Downloading
+**Date:** January 2026
 
-## Decisions
+**Decision:** Deprioritizing Web Scraping in favor of structured ELT Pipelines.
 
-### 1. Main Scraper (Data Extraction)
+**Reason:** Scraping often suffers from high maintenance due to UI changes. ELT focuses on data architecture, scalability, and leveraging modern data warehouses, which aligns better with long-term data engineering goals.
 
-**Decision:** Automated
-**Reason:** This is the core of the "Extract" phase. Automation is mandatory to ensure consistent data flow from the target source.
+## Updated Pipeline Components (ELT Focus)
 
-### 2. Data Cleaning (Transformation)
-
-**Decision:** Automated
-**Reason:** To ensure data integrity. Automated scripts remove duplicates and format dates/currencies before the "Load" phase.
-
-### 3. Error Notification (Monitoring)
-
-**Decision:** Automated
-**Reason:** Critical for pipeline health. I need immediate alerts if the target website structure changes or the scraper fails.
-
-### 4. Proxy Rotation
-
-**Decision:** Pending / Conditional
-**Reason:** Currently not required for low-volume scraping. Will be automated if rate-limiting becomes a bottleneck.
-
-### 5. Image Downloading
-
-**Decision:** Manual / Not Automated (Temporary)
-**Reason:** High storage cost and not critical for the current data analysis phase. Focusing on textual data first.
+1. **Extraction (E):** Focus on API integrations and Database CDC (Change Data Capture) instead of DOM parsing.
+2. **Loading (L):** Prioritizing "Load First" to Cloud Storage (S3/GCS) or Data Warehouses (BigQuery/Postgres).
+3. **Transformation (T):** Moving logic to SQL-based transformations (dbt style) post-loading.
+4. **Monitoring:** Automated alerts for schema changes and pipeline failures via GitHub Actions.
