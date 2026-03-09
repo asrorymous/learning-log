@@ -32,3 +32,23 @@ I am officially shifting my focus from **Web Scraping** to **ELT (Extract, Load,
 3. **Architecture**: I am more fascinated by how data is modeled and transformed (dbt/SQL) than how it is "captured" from a website.
 
 _This "Day 1" remains here as a testament to my starting point, but my journey continues towards Data Engineering._
+
+---
+
+### Current Focus (Update)
+
+Recently I started exploring Python as a tool for learning and building data pipelines.
+
+My current interests include:
+
+**Python for data processing**
+
+**ELT (Extract, Load, Transform) workflows**
+
+**API-based data ingestion**
+
+**Data transformation and modeling**
+
+**Building reliable data pipelines**
+
+This section reflects the direction I am currently exploring while continuing to document my learning journey.
